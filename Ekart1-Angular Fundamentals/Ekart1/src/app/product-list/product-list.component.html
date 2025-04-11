@@ -1,3 +1,4 @@
+<div class="ekart-product-container">
 <p>Name : {{product.name}}</p>
 <p>color : {{product.color}}</p>
 <p>Price : {{'$' + product.price}}</p>
@@ -5,3 +6,26 @@
 
 <p>Discounted Price : {{getDiscountedPrice().toFixed(2)}}</p>
 <p>{{product.inStock>0?" only " + product.inStock+" items left in stock ":"Not in stock"}}</p>
+<!-- Property Binding Example -->
+<button [disabled]="!(product.inStock > 0)">Buy Now</button>
+<!-- For disabled,hidden and checked(basically for boolean) string interpolation doesn't work,hence we have property binding -->
+
+<input [value]="name" [attr.aria-hidden]="true">
+<!-- <input bind-value="name"> Instead of [] we can use bind before the attribute for property binding,but using [] is more common-->
+
+<!-- Difference between attribute and property
+1.attribute-represents the initial value and doesn't change
+2.property-represents the current value and can change 
+There are some attributes (aria-label,aria-hidden,aria-expanded,aria-control,colspan,data-id,data-name,data-value)which if you try to bind through property binding ,then it will not work for that we have 
+attribute binding
+<input [value]="name" [attr.aria-hidden]="true">
+-->
+<br>
+<!-- Event Binding Example -->
+Designation:<input [value]="designation" (input)="onDesignationChange($event)"><br>
+<p>{{designation}}</p>
+</div>
+
+<button (click)="onDecrement()">-</button>
+<span>{{addToCart}}</span>
+<button (click)="onIncrement()">+</button>
