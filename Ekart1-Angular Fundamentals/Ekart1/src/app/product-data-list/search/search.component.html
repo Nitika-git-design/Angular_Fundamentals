@@ -1,5 +1,14 @@
+<!-- Combining property binding and Event binding to achieve Two-way data binding
+ 
 <div class="ekart-product-search-box">
-    <input class="ekart-product-search-input">
-    <button class="btn btn-search"></button>
+    <input class="ekart-product-search-input" [value]="searchText" (input)="onSearch($event)">
+    <button class="btn btn-search">Search</button>
 </div>
-<div class="ekart-product-search-result-for"><strong>Search result for:</strong>Men's Wear</div>
+<div class="ekart-product-search-result-for"><strong>Search result for:</strong>{{searchText}}</div> -->
+
+<!--Two way data binding using [(ngModel)]-->
+<div class="ekart-product-search-box">
+    <input class="ekart-product-search-input" [(ngModel)]="searchText">
+    <button class="btn btn-search">Search</button>
+</div>
+<div class="ekart-product-search-result-for"><strong>Search result for:</strong>{{searchText}}</div>

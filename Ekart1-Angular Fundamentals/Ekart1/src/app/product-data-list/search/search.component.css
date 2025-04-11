@@ -16,10 +16,14 @@
  border: none;
 }
 .btn-search{
-padding: 12px 30px;
+padding: 1px 20px;
 background-color: #282828;
 margin-left: -2px;
+color: #fff;
+height: 36px;
+text-align: center;
 }
 .ekart-product-search-result-for{
-
+ margin: 20px auto;
+ padding: 10px 140px;
 }
