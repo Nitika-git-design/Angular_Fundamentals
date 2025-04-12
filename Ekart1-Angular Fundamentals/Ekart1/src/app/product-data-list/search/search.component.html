@@ -8,7 +8,9 @@
 
 <!--Two way data binding using [(ngModel)]-->
 <div class="ekart-product-search-box">
-    <input class="ekart-product-search-input" [(ngModel)]="searchText" (input)="onSearchTextChange()">
-    <button [ngClass]="{'btn':true,'btn-search':searchText}" [disabled]="!searchText">Search</button>
+    <!-- <input class="ekart-product-search-input" [(ngModel)]="searchText" (input)="onSearchTextChange()"> -->
+    <!-- <button [ngClass]="{'btn':true,'btn-search':searchText}" [disabled]="!searchText">Search</button> -->
+    <input class="ekart-product-search-input" #searchInputRef>
+    <button class="btn btn-search" (click)="updateSearchText(searchInputRef)">Search</button>
 </div>
 <div class="ekart-product-search-result-for" *ngIf="searchText !=''"><strong>Search result for:</strong>{{searchText}}</div>
