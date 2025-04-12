@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-sub-list',
@@ -540,4 +540,7 @@ export class ProductSubListComponent {
   onFilterChange(value:string){
     this.selectedFilterButton = value;
   }
+  @Input()
+  searchText:string = "";
+
 }

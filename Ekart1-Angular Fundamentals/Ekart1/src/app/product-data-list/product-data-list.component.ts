@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-data-list.component.css']
 })
 export class ProductDataListComponent {
-
+  searchText:string = "";
+  setSearchText(value:string){
+    this.searchText = value;
+  }
 }

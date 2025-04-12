@@ -1,6 +1,7 @@
 <app-product-filter [all]="totalProductCount" [in_stock]="totalProductInStock" [out_stock]="totalProductOutStock" (selectedFilterButtons)="onFilterChange($event)"></app-product-filter>
 <div class="product-container">
+   <!-- *ngIf="selectedFilterButton ==='All'|| prod.is_in_inventory.toString() === selectedFilterButton" -->
    <div *ngFor="let prod of products" >
-   <app-single-product [product]="prod" *ngIf="selectedFilterButton ==='All'|| prod.is_in_inventory.toString() === selectedFilterButton"></app-single-product>
+   <app-single-product [product]="prod" *ngIf="prod.name.toLowerCase().includes(searchText)"></app-single-product>
 </div>
 </div>
