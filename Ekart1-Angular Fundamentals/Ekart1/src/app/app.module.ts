@@ -11,6 +11,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDataListComponent } from './product-data-list/product-data-list.component';
 import { SearchComponent } from './product-data-list/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { ProductSubListComponent } from './product-data-list/product-sub-list/product-sub-list.component';
+import { SingleProductComponent } from './product-data-list/product-sub-list/single-product/single-product.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     ProductListComponent,
     ProductDataListComponent,
     SearchComponent,
+    ProductSubListComponent,
+    SingleProductComponent,
   ],
   imports: [
     BrowserModule,
