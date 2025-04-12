@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,EventEmitter,Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-filter',
@@ -12,4 +12,10 @@ all:number =0;
 in_stock:number = 0;
 @Input()
 out_stock:number=0;
+@Output()
+selectedFilterButtons:EventEmitter<string> = new EventEmitter<string>();
+selectedFilterButton:string = "All";
+selectedFilterButtonOnChange(){
+  this.selectedFilterButtons.emit(this.selectedFilterButton);
+}
 }
