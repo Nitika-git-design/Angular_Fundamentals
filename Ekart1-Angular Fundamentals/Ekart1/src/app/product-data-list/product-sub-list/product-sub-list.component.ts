@@ -536,8 +536,8 @@ export class ProductSubListComponent {
   totalProductCount = this.products.length;
   totalProductInStock = this.products.filter(p =>p.is_in_inventory === true).length;
   totalProductOutStock = this.products.filter(p =>p.is_in_inventory === false).length;
-  selectedFilterRadio:string='All';
+  selectedFilterButton:string='All';
   onFilterChange(value:string){
-    this.selectedFilterRadio = value;
+    this.selectedFilterButton = value;
   }
 }
