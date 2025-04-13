@@ -21,6 +21,5 @@ onSearch(event:any){
 updateSearchText(inputRef:HTMLInputElement){
   this.searchText = inputRef.value;
   this.searchTextChange.emit(this.searchText);
-
 }
 }

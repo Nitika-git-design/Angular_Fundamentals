@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { product } from 'src/app/Modules/product';
 
 @Component({
   selector: 'app-product-sub-list',
@@ -6,6 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./product-sub-list.component.css']
 })
 export class ProductSubListComponent {
+  selectedProduct:product;
   products = [
     {
       id: 1,

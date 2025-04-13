@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductSubListComponent } from './product-data-list/product-sub-list/product-sub-list.component';
 import { SingleProductComponent } from './product-data-list/product-sub-list/single-product/single-product.component';
 import { ProductFilterComponent } from './product-data-list/product-sub-list/product-filter/product-filter.component';
+import { SelectedProductComponent } from './product-data-list/selected-product/selected-product.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ProductFilterComponent } from './product-data-list/product-sub-list/pro
     ProductSubListComponent,
     SingleProductComponent,
     ProductFilterComponent,
+    SelectedProductComponent,
   ],
   imports: [
     BrowserModule,
