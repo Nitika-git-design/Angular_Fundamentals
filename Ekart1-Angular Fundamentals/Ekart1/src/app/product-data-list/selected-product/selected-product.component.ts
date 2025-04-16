@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { product } from 'src/app/Modules/product';
+import { ProductDataListComponent } from '../product-data-list.component';
 
 @Component({
   selector: 'app-selected-product',
@@ -7,5 +8,6 @@ import { product } from 'src/app/Modules/product';
   styleUrls: ['./selected-product.component.css']
 })
 export class SelectedProductComponent {
-product:product;
+  @Input()
+    productListComp:ProductDataListComponent = undefined;
 }
